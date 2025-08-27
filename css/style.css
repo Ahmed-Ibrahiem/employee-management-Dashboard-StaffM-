@@ -1,0 +1,179 @@
+:root {
+  --color-green: #0e9f6e;
+  --color-green-light: #15f0a630;
+  --color-black: #1c242e;
+  --color-gray: #6b7280;
+  --color-gray-light: #e5e7eb;
+  --color-white: #f9f9f9;
+  --bg-white: #f9fafb;
+}
+* {
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box !important;
+  font-family: "Inter", sans-serif;
+  transition: 0.3s;
+}
+p{
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+::-webkit-scrollbar{
+    appearance: none;
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--color-gray-light);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-green);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+@keyframes FadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cards_container{
+  row-gap: 20px;
+  padding: 0;
+}
+.card_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.emp_card {
+  width: 300px;
+  border: 2px solid var(--color-gray-light);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.card_header {
+  height: 160px;
+  background: var(--color-white);
+  border-radius: 5px 5px 0 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card_header_top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.card_header_top .employee_name {
+  position: relative;
+  font-weight: 600;
+  padding: 0 10px;
+}
+.card_header_top .employee_name::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 80%;
+  width: 2px;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  background-color: var(--color-black);
+}
+.employee_status {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: var(--color-gray-light);
+  color: var(--color-gray);
+}
+.employee_status.active {
+  background-color: var(--color-green-light);
+  color: var(--color-green);
+}
+.card_header_bottom {
+  font-size: 14px;
+  margin-top: 3px;
+  color: var(--color-gray);
+}
+.card_body {
+  margin-top: -40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.emp_img_box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.emp_card:hover .emp_img_box{
+  scale: 1.1;
+}
+.emp_img_box img {
+  width: 80px;
+  border-radius: 50%;
+}
+.employee_email {
+  font-size: 14px;
+}
+.employee_info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+.employee_info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.employee_info div p {
+  margin: 0;
+}
+.employee_location_container_left,
+.employee_contact_container_left,
+.employee_barthday_container_left {
+  gap: 10px;
+  color: var(--color-gray);
+  font-weight: 500;
+}
+.employee_location_container_right,
+.employee_contact_container_right,
+.employee_barthday_container_right{
+  >p {
+    text-align: right;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.app_content .content .container{
+      background: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
