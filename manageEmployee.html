@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="/css/manageEmployee.css" />
+    <link rel="stylesheet" href="/css/employeesTable.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav_left">
+        <div class="img_box">
+          <img src="/img/staff_logo.png" alt="" />
+          <h2>StaffM</h2>
+        </div>
+        <div class="search_part">
+          <input type="text" placeholder="search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </div>
+    <div class="app_content">
+      <div class="menu_container">
+        <div class="menu">
+          <div class="menu_content">
+            <ul>
+              <li class="active">
+                <div href="##">
+                  <div class="left">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Employee</span>
+                  </div>
+                  <i class="fa-solid fa-angle-right angle"></i>
+                </div>
+                <ul class="nested_ul">
+                  <li class="active">
+                    <a href="manageEmployee.html">Manage Employee</a>
+                  </li>
+                  <li><a href="directory.html">Directory</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="menu_btn">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+      <div class="content">
+        <h2 class="title">Manage Employee</h2>
+        <div class="container">
+          <div class="manage_content">
+            <div class="header">
+              <h3>List Of Employees</h3>
+              <button class="new_employee add_status">
+                <i class="fa-solid fa-plus"></i>
+                <span>add new employee</span>
+              </button>
+            </div>
+            <div class="filter_bar">
+              <div class="filter_sections_contianer">
+                <div class="search_part">
+                  <input
+                    type="text"
+                    placeholder="Search employees by id, status, ..."
+                  />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="filter_section status_filter">
+                  <p class="current_filter">status: <span>All</span></p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  <div class="filter_options" hidden>
+                    <button>All</button>
+                    <button>Acitve</button>
+                    <button>Inactive</button>
+                  </div>
+                </div>
+                <div class="filter_section type_filter">
+                  <p class="current_filter">Type: <span>All</span></p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  <div class="filter_options" hidden>
+                    <button>All</button>
+                    <button>Experience</button>
+                    <button>Fresher</button>
+                  </div>
+                </div>
+                <div class="filter_section date_filter">
+                  <p class="current_filter">Date: <span>Mar 20, 2024</span></p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  <div class="filter_options" hidden>
+                    <button>All</button>
+                    <button>Acitve</button>
+                    <button>Inactive</button>
+                  </div>
+                </div>
+              </div>
+              <button class="advanced_filter">
+                <i class="fa-solid fa-filter"></i>
+                <p>advanced filter</p>
+              </button>
+            </div>
+            <div class="table_container">
+              <table>
+                <thead>
+                  <tr>
+                    <td class="master_checkbox_td"><input type="checkbox" class="master_checkbox" /></td>
+                    <td class="emp_id">
+                      <span>Id</span>
+                      <i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Status</td>
+                    <td>Type</td>
+                    <td>
+                      <span>Team Leader</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>
+                      <span>Role</span><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>
+                      <span>Productive</span
+                      ><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Joining Date</td>
+                    <td>
+                      <span>Salary</span><i class="fa-solid fa-arrow-down"></i>
+                    </td>
+                    <td>Work type</td>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/modules/manageEmployee.js"></script>
+    <script type="module" src="modules/renderEmployeesInTable.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+  </body>
+</html>
